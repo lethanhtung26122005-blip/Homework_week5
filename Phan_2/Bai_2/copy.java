@@ -15,25 +15,37 @@ class main {
         PrintWriter pw = null;
         int count = 0;
         try {
+            try {
             br = new BufferedReader((new FileReader(a)));
+            } catch(FileNotFoundException e) {
+            System.out.println("Source file not found !");
+            return;
+            }
+            try {
             pw = new PrintWriter(new FileWriter(b));
+            } catch(FileNotFoundException e) {
+            System.out.println("Cannot find destination file !");
+            return;
+            }
             String line;
             while((line = br.readLine()) != null) {
                 pw.println(line);
                 count++;
             }
-        } catch(FileNotFoundException e) {
-            System.out.println("Source file not found !");
-        } catch(IOException e) {
+            } catch(IOException e) {
             System.out.println("I/O error");
-        } finally {
-        if (pw != null) pw.close();
-        if (br != null) {
-        try { 
-            br.close(); 
-        } catch (IOException e) {}
-        }
-        }
+            e.printStackTrace();
+            } finally {
+                if (pw != null) pw.close();
+                if (br != null) {
+                    try { 
+                        br.close(); 
+                    } catch (IOException e) {
+                        System.out.println("I/O error");
+                        e.printStackTrace();
+                    }
+                }
+            }
         System.out.println(count);
     }
 }
