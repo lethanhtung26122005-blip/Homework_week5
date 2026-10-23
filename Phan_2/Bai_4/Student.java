@@ -3,12 +3,7 @@ package Homework.Homework_week5.Phan_2.Bai_4;
 import java.io.*;
 import java.util.*;
 
-<<<<<<< HEAD:Phan_2/Bai_4/Main.java
-class Student implements Serializable {
-=======
 public class Student implements Serializable {
-    private static final long serialVersionUID = 1L;
->>>>>>> e7d5c5502c9da89a37ea960c67957b9746cfd09f:Phan_2/Bai_4/Student.java
 
     public String id;
     public String name;

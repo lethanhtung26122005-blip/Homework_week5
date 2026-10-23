@@ -40,7 +40,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap duong dan file config: ");
-        String path = sc.nextLine().trim().replace("\"", "");
+        String path = sc.nextLine().trim();
 
         BufferedReader br = null;
         Map<String, String> config = new LinkedHashMap<>();

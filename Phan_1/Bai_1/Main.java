@@ -63,7 +63,7 @@ public class Main {
         System.out.println();
 
         String text = "Java is great! Do you like Java? I learn Java every day. "
-                    + "Java is used for web, mobile... Really? Yes!";
+                    + "Java is used for web, mobile... Really??? Yes!";
         contentAnalysis(text);
     }
 }
