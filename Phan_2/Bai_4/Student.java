@@ -3,7 +3,12 @@ package Homework.Homework_week5.Phan_2.Bai_4;
 import java.io.*;
 import java.util.*;
 
+<<<<<<< HEAD:Phan_2/Bai_4/Main.java
 class Student implements Serializable {
+=======
+public class Student implements Serializable {
+    private static final long serialVersionUID = 1L;
+>>>>>>> e7d5c5502c9da89a37ea960c67957b9746cfd09f:Phan_2/Bai_4/Student.java
 
     public String id;
     public String name;
@@ -21,13 +26,12 @@ class Student implements Serializable {
     }
 }
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String path = "Java_programming/Homework/Homework_week5/Phan_2/Bai_4/students.dat";
         List<Student> list = new ArrayList<>();
 
-        // 1. Nhập danh sách cho tới khi gặp "END"
         while (true) {
             System.out.print("Nhap id (go END de ket thuc): ");
             String id = sc.nextLine().trim();
@@ -48,7 +52,6 @@ public class Main {
             list.add(new Student(id, name, gpa));
         }
 
-        // 2. Ghi từng sinh viên ra file
         ObjectOutputStream oos = null;
         try {
             oos = new ObjectOutputStream(new FileOutputStream(path));
@@ -72,7 +75,6 @@ public class Main {
             }
         }
 
-        // 3. Đọc lại và in danh sách
         ObjectInputStream ois = null;
         int count = 0;
         try {
