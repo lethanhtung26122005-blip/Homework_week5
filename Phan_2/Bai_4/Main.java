@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 
 class Student implements Serializable {
-    private static final long serialVersionUID = 1L;
 
     public String id;
     public String name;
@@ -25,7 +24,7 @@ class Student implements Serializable {
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String path = "students.dat";
+        String path = "Java_programming/Homework/Homework_week5/Phan_2/Bai_4/students.dat";
         List<Student> list = new ArrayList<>();
 
         // 1. Nhập danh sách cho tới khi gặp "END"

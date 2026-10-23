@@ -1,0 +1,7 @@
+username = user1
+timeout = 30
+maxConnections = 10
+
+username = user2
+timeout = 10
+maxConnections = 20
